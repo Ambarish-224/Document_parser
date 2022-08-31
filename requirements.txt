@@ -6,3 +6,9 @@ PyYAML
 
 ### local packages -
 # -e . # << uncomment this to install from setup.py
+## Project package
+paddleocr==2.6
+flask
+flask-cors
+requests==2.22.0
+paddlepaddle
