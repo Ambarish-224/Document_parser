@@ -3,6 +3,8 @@ import yaml
 import logging
 import time
 import json
+import base64
+
 
 def read_yaml(path_to_yaml: str) -> dict:
     with open(path_to_yaml) as yaml_file:
@@ -21,3 +23,15 @@ def save_json(path: str, data: dict) -> None:
         json.dump(data, f, indent=4)
 
     logging.info(f"json file saved at: {path}")
+
+
+def decodeImage(imgstring, fileName):
+    imgdata = base64.b64decode(imgstring)
+    with open(fileName, 'wb') as f:
+        f.write(imgdata)
+        f.close()
+
+
+def encodeImageIntoBase64(croppedImagePath):
+    with open(croppedImagePath, "rb") as f:
+        return base64.b64encode(f.read())

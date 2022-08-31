@@ -1,0 +1,926 @@
+[2022-09-01 00:13:47,169: INFO: server]: Started server process [128096]
+[2022-09-01 00:13:47,170: INFO: on]: Waiting for application startup.
+[2022-09-01 00:13:47,170: INFO: on]: Application startup complete.
+[2022-09-01 00:13:47,171: INFO: server]: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+[2022-09-01 00:15:31,336: INFO: server]: Shutting down
+[2022-09-01 00:15:31,446: INFO: on]: Waiting for application shutdown.
+[2022-09-01 00:15:31,447: INFO: on]: Application shutdown complete.
+[2022-09-01 00:15:31,447: INFO: server]: Finished server process [128096]
+[2022-09-01 00:15:34,385: INFO: server]: Started server process [142920]
+[2022-09-01 00:15:34,385: INFO: on]: Waiting for application startup.
+[2022-09-01 00:15:34,386: INFO: on]: Application startup complete.
+[2022-09-01 00:15:34,387: INFO: server]: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+[2022-09-01 00:15:36,858: ERROR: h11_impl]: Exception in ASGI application
+Traceback (most recent call last):
+  File "D:\Document_parser\env\lib\site-packages\starlette\responses.py", line 318, in __call__
+    stat_result = await anyio.to_thread.run_sync(os.stat, self.path)
+  File "D:\Document_parser\env\lib\site-packages\anyio\to_thread.py", line 31, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(
+  File "D:\Document_parser\env\lib\site-packages\anyio\_backends\_asyncio.py", line 937, in run_sync_in_worker_thread
+    return await future
+  File "D:\Document_parser\env\lib\site-packages\anyio\_backends\_asyncio.py", line 867, in run
+    result = context.run(func, *args)
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'index.html'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Document_parser\env\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 404, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "D:\Document_parser\env\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\fastapi\applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\middleware\errors.py", line 184, in __call__
+    raise exc
+  File "D:\Document_parser\env\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "D:\Document_parser\env\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "D:\Document_parser\env\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "D:\Document_parser\env\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\routing.py", line 68, in app
+    await response(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\responses.py", line 321, in __call__
+    raise RuntimeError(f"File at path {self.path} does not exist.")
+RuntimeError: File at path index.html does not exist.
+[2022-09-01 00:19:31,687: INFO: server]: Shutting down
+[2022-09-01 00:19:31,798: INFO: on]: Waiting for application shutdown.
+[2022-09-01 00:19:31,798: INFO: on]: Application shutdown complete.
+[2022-09-01 00:19:31,799: INFO: server]: Finished server process [142920]
+[2022-09-01 00:27:00,225: INFO: config]: Will watch for changes in these directories: ['D:\\Document_parser']
+[2022-09-01 00:27:00,230: INFO: config]: Uvicorn running on http://localhost:8085 (Press CTRL+C to quit)
+[2022-09-01 00:27:00,230: INFO: basereload]: Started reloader process [139296] using StatReload
+[2022-09-01 00:27:02,820: INFO: server]: Started server process [141992]
+[2022-09-01 00:27:02,821: INFO: on]: Waiting for application startup.
+[2022-09-01 00:27:02,822: INFO: on]: Application startup complete.
+[2022-09-01 00:27:59,221: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:28:01,786: INFO: server]: Started server process [141456]
+[2022-09-01 00:28:01,787: INFO: on]: Waiting for application startup.
+[2022-09-01 00:28:01,787: INFO: on]: Application startup complete.
+[2022-09-01 00:28:20,505: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:28:22,874: INFO: server]: Started server process [141812]
+[2022-09-01 00:28:22,875: INFO: on]: Waiting for application startup.
+[2022-09-01 00:28:22,876: INFO: on]: Application startup complete.
+[2022-09-01 00:28:25,556: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:28:27,704: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:28:32,690: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:28:39,149: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:28:41,581: INFO: server]: Started server process [141596]
+[2022-09-01 00:28:41,582: INFO: on]: Waiting for application startup.
+[2022-09-01 00:28:41,582: INFO: on]: Application startup complete.
+[2022-09-01 00:28:48,655: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:28:51,212: INFO: server]: Started server process [135984]
+[2022-09-01 00:28:51,213: INFO: on]: Waiting for application startup.
+[2022-09-01 00:28:51,213: INFO: on]: Application startup complete.
+[2022-09-01 00:29:28,696: ERROR: h11_impl]: Exception in ASGI application
+Traceback (most recent call last):
+  File "D:\Document_parser\env\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 404, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "D:\Document_parser\env\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\fastapi\applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\middleware\errors.py", line 184, in __call__
+    raise exc
+  File "D:\Document_parser\env\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "D:\Document_parser\env\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "D:\Document_parser\env\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "D:\Document_parser\env\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+  File "D:\Document_parser\env\lib\site-packages\fastapi\routing.py", line 231, in app
+    raw_response = await run_endpoint_function(
+  File "D:\Document_parser\env\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "D:\Document_parser\app.py", line 20, in index
+    encoded_image, result = doc_parser.getOcrPrediction()
+  File "D:\Document_parser\doc_parser\component\stage_00_template.py", line 40, in getOcrPrediction
+    encoded_image = encodeImageIntoBase64(im_show)
+  File "D:\Document_parser\doc_parser\utils\common.py", line 36, in encodeImageIntoBase64
+    with open(croppedImagePath, "rb") as f:
+TypeError: expected str, bytes or os.PathLike object, not Image
+[2022-09-01 00:30:24,358: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:30:26,548: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:30:30,202: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:30:32,387: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:30:34,908: INFO: server]: Started server process [133712]
+[2022-09-01 00:30:34,909: INFO: on]: Waiting for application startup.
+[2022-09-01 00:30:34,909: INFO: on]: Application startup complete.
+[2022-09-01 00:30:55,286: ERROR: h11_impl]: Exception in ASGI application
+Traceback (most recent call last):
+  File "D:\Document_parser\env\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 404, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "D:\Document_parser\env\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\fastapi\applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\middleware\errors.py", line 184, in __call__
+    raise exc
+  File "D:\Document_parser\env\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "D:\Document_parser\env\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "D:\Document_parser\env\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "D:\Document_parser\env\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+  File "D:\Document_parser\env\lib\site-packages\fastapi\routing.py", line 231, in app
+    raw_response = await run_endpoint_function(
+  File "D:\Document_parser\env\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "D:\Document_parser\app.py", line 20, in index
+    encoded_image, result = doc_parser.getOcrPrediction()
+  File "D:\Document_parser\doc_parser\component\stage_00_template.py", line 40, in getOcrPrediction
+    encoded_image = encodeImageIntoBase64(im_show)
+  File "D:\Document_parser\doc_parser\utils\common.py", line 36, in encodeImageIntoBase64
+    with open(croppedImagePath, "rb") as f:
+TypeError: expected str, bytes or os.PathLike object, not Image
+[2022-09-01 00:31:30,323: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:31:33,074: INFO: server]: Started server process [138040]
+[2022-09-01 00:31:33,074: INFO: on]: Waiting for application startup.
+[2022-09-01 00:31:33,075: INFO: on]: Application startup complete.
+[2022-09-01 00:31:34,162: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:31:36,409: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:31:38,609: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:31:40,970: INFO: server]: Started server process [143304]
+[2022-09-01 00:31:40,971: INFO: on]: Waiting for application startup.
+[2022-09-01 00:31:40,971: INFO: on]: Application startup complete.
+[2022-09-01 00:32:24,719: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:32:27,302: INFO: server]: Started server process [125144]
+[2022-09-01 00:32:27,303: INFO: on]: Waiting for application startup.
+[2022-09-01 00:32:27,303: INFO: on]: Application startup complete.
+[2022-09-01 00:32:29,864: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:32:32,143: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:32:34,341: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:32:36,917: INFO: server]: Started server process [142512]
+[2022-09-01 00:32:36,918: INFO: on]: Waiting for application startup.
+[2022-09-01 00:32:36,918: INFO: on]: Application startup complete.
+[2022-09-01 00:33:01,862: ERROR: h11_impl]: Exception in ASGI application
+Traceback (most recent call last):
+  File "D:\Document_parser\env\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 404, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "D:\Document_parser\env\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\fastapi\applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\middleware\errors.py", line 184, in __call__
+    raise exc
+  File "D:\Document_parser\env\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "D:\Document_parser\env\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "D:\Document_parser\env\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "D:\Document_parser\env\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+  File "D:\Document_parser\env\lib\site-packages\fastapi\routing.py", line 231, in app
+    raw_response = await run_endpoint_function(
+  File "D:\Document_parser\env\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "D:\Document_parser\app.py", line 20, in index
+    encoded_image, result = doc_parser.getOcrPrediction()
+  File "D:\Document_parser\doc_parser\component\stage_00_template.py", line 40, in getOcrPrediction
+    encoded_image = encodeImageIntoBase64(im_show)
+  File "D:\Document_parser\doc_parser\utils\common.py", line 36, in encodeImageIntoBase64
+    with open(croppedImagePath, "rb") as f:
+TypeError: expected str, bytes or os.PathLike object, not Image
+[2022-09-01 00:33:37,467: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:33:39,711: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:33:41,884: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:33:44,628: INFO: server]: Started server process [140884]
+[2022-09-01 00:33:44,628: INFO: on]: Waiting for application startup.
+[2022-09-01 00:33:44,629: INFO: on]: Application startup complete.
+[2022-09-01 00:33:45,591: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:33:48,026: INFO: server]: Started server process [143512]
+[2022-09-01 00:33:48,027: INFO: on]: Waiting for application startup.
+[2022-09-01 00:33:48,027: INFO: on]: Application startup complete.
+[2022-09-01 00:33:55,025: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:33:57,599: INFO: server]: Started server process [143820]
+[2022-09-01 00:33:57,600: INFO: on]: Waiting for application startup.
+[2022-09-01 00:33:57,601: INFO: on]: Application startup complete.
+[2022-09-01 00:34:26,252: ERROR: h11_impl]: Exception in ASGI application
+Traceback (most recent call last):
+  File "D:\Document_parser\env\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 404, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "D:\Document_parser\env\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\fastapi\applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\middleware\errors.py", line 184, in __call__
+    raise exc
+  File "D:\Document_parser\env\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "D:\Document_parser\env\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "D:\Document_parser\env\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "D:\Document_parser\env\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+  File "D:\Document_parser\env\lib\site-packages\fastapi\routing.py", line 231, in app
+    raw_response = await run_endpoint_function(
+  File "D:\Document_parser\env\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "D:\Document_parser\app.py", line 20, in index
+    encoded_image, result = doc_parser.getOcrPrediction()
+  File "D:\Document_parser\doc_parser\component\stage_00_template.py", line 40, in getOcrPrediction
+    encoded_image = encodeImageIntoBase64(im_show)
+  File "D:\Document_parser\doc_parser\utils\common.py", line 36, in encodeImageIntoBase64
+    with open(croppedImagePath, "rb") as f:
+TypeError: expected str, bytes or os.PathLike object, not Image
+[2022-09-01 00:35:25,858: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:35:28,062: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:35:30,524: INFO: server]: Started server process [143776]
+[2022-09-01 00:35:30,525: INFO: on]: Waiting for application startup.
+[2022-09-01 00:35:30,525: INFO: on]: Application startup complete.
+[2022-09-01 00:35:38,964: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:36:18,894: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:36:21,247: INFO: server]: Started server process [139268]
+[2022-09-01 00:36:21,248: INFO: on]: Waiting for application startup.
+[2022-09-01 00:36:21,248: INFO: on]: Application startup complete.
+[2022-09-01 00:36:50,968: ERROR: h11_impl]: Exception in ASGI application
+Traceback (most recent call last):
+  File "D:\Document_parser\env\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 404, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "D:\Document_parser\env\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\fastapi\applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\middleware\errors.py", line 184, in __call__
+    raise exc
+  File "D:\Document_parser\env\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "D:\Document_parser\env\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "D:\Document_parser\env\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "D:\Document_parser\env\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+  File "D:\Document_parser\env\lib\site-packages\fastapi\routing.py", line 231, in app
+    raw_response = await run_endpoint_function(
+  File "D:\Document_parser\env\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "D:\Document_parser\app.py", line 20, in index
+    encoded_image, result = doc_parser.getOcrPrediction()
+  File "D:\Document_parser\doc_parser\component\stage_00_template.py", line 40, in getOcrPrediction
+    encoded_image = encodeImageIntoBase64(im_show)
+  File "D:\Document_parser\doc_parser\utils\common.py", line 36, in encodeImageIntoBase64
+    with open(croppedImagePath, "rb") as f:
+TypeError: expected str, bytes or os.PathLike object, not Image
+[2022-09-01 00:39:32,927: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:39:35,990: INFO: basereload]: Stopping reloader process [139296]
+[2022-09-01 00:39:39,489: INFO: config]: Will watch for changes in these directories: ['D:\\Document_parser']
+[2022-09-01 00:39:39,492: INFO: config]: Uvicorn running on http://localhost:8085 (Press CTRL+C to quit)
+[2022-09-01 00:39:39,493: INFO: basereload]: Started reloader process [136480] using StatReload
+[2022-09-01 00:39:42,357: INFO: server]: Started server process [143576]
+[2022-09-01 00:39:42,357: INFO: on]: Waiting for application startup.
+[2022-09-01 00:39:42,358: INFO: on]: Application startup complete.
+[2022-09-01 00:40:11,246: ERROR: h11_impl]: Exception in ASGI application
+Traceback (most recent call last):
+  File "D:\Document_parser\env\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 404, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "D:\Document_parser\env\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\fastapi\applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\middleware\errors.py", line 184, in __call__
+    raise exc
+  File "D:\Document_parser\env\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "D:\Document_parser\env\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "D:\Document_parser\env\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "D:\Document_parser\env\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+  File "D:\Document_parser\env\lib\site-packages\fastapi\routing.py", line 231, in app
+    raw_response = await run_endpoint_function(
+  File "D:\Document_parser\env\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "D:\Document_parser\app.py", line 20, in index
+    encoded_image, result = doc_parser.getOcrPrediction()
+  File "D:\Document_parser\doc_parser\component\stage_00_template.py", line 40, in getOcrPrediction
+    encoded_image = encodeImageIntoBase64(im_show)
+  File "D:\Document_parser\doc_parser\utils\common.py", line 36, in encodeImageIntoBase64
+    with open(croppedImagePath, "rb") as f:
+TypeError: expected str, bytes or os.PathLike object, not Image
+[2022-09-01 00:41:38,235: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:41:40,775: INFO: server]: Started server process [142512]
+[2022-09-01 00:41:40,776: INFO: on]: Waiting for application startup.
+[2022-09-01 00:41:40,776: INFO: on]: Application startup complete.
+[2022-09-01 00:41:43,492: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:42:08,929: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:42:11,194: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:42:13,621: INFO: server]: Started server process [139840]
+[2022-09-01 00:42:13,622: INFO: on]: Waiting for application startup.
+[2022-09-01 00:42:13,623: INFO: on]: Application startup complete.
+[2022-09-01 00:43:30,947: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:43:33,333: INFO: server]: Started server process [140832]
+[2022-09-01 00:43:33,334: INFO: on]: Waiting for application startup.
+[2022-09-01 00:43:33,334: INFO: on]: Application startup complete.
+[2022-09-01 00:43:37,448: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:43:40,243: INFO: server]: Started server process [139944]
+[2022-09-01 00:43:40,243: INFO: on]: Waiting for application startup.
+[2022-09-01 00:43:40,244: INFO: on]: Application startup complete.
+[2022-09-01 00:44:12,342: ERROR: h11_impl]: Exception in ASGI application
+Traceback (most recent call last):
+  File "D:\Document_parser\env\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 404, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "D:\Document_parser\env\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\fastapi\applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\middleware\errors.py", line 184, in __call__
+    raise exc
+  File "D:\Document_parser\env\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "D:\Document_parser\env\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "D:\Document_parser\env\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "D:\Document_parser\env\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+  File "D:\Document_parser\env\lib\site-packages\fastapi\routing.py", line 231, in app
+    raw_response = await run_endpoint_function(
+  File "D:\Document_parser\env\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "D:\Document_parser\app.py", line 20, in index
+    encoded_image, result = doc_parser.getOcrPrediction()
+  File "D:\Document_parser\doc_parser\component\stage_00_template.py", line 40, in getOcrPrediction
+    encoded_image = encodeImageIntoBase64(im_show)
+  File "D:\Document_parser\doc_parser\utils\common.py", line 36, in encodeImageIntoBase64
+    with open(croppedImagePath, "rb") as f:
+TypeError: expected str, bytes or os.PathLike object, not Image
+[2022-09-01 00:45:27,574: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:45:30,045: INFO: server]: Started server process [144420]
+[2022-09-01 00:45:30,046: INFO: on]: Waiting for application startup.
+[2022-09-01 00:45:30,047: INFO: on]: Application startup complete.
+[2022-09-01 00:45:31,325: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:45:33,496: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:45:35,697: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:45:38,133: INFO: server]: Started server process [140976]
+[2022-09-01 00:45:38,134: INFO: on]: Waiting for application startup.
+[2022-09-01 00:45:38,134: INFO: on]: Application startup complete.
+[2022-09-01 00:45:39,411: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:45:42,989: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:45:50,933: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:45:53,094: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:45:55,596: INFO: server]: Started server process [144824]
+[2022-09-01 00:45:55,597: INFO: on]: Waiting for application startup.
+[2022-09-01 00:45:55,597: INFO: on]: Application startup complete.
+[2022-09-01 00:45:58,211: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:46:00,736: INFO: server]: Started server process [142580]
+[2022-09-01 00:46:00,736: INFO: on]: Waiting for application startup.
+[2022-09-01 00:46:00,737: INFO: on]: Application startup complete.
+[2022-09-01 00:46:01,937: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:46:04,352: INFO: server]: Started server process [142600]
+[2022-09-01 00:46:04,353: INFO: on]: Waiting for application startup.
+[2022-09-01 00:46:04,353: INFO: on]: Application startup complete.
+[2022-09-01 00:46:11,346: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:46:14,060: INFO: server]: Started server process [133704]
+[2022-09-01 00:46:14,062: INFO: on]: Waiting for application startup.
+[2022-09-01 00:46:14,063: INFO: on]: Application startup complete.
+[2022-09-01 00:46:34,650: ERROR: h11_impl]: Exception in ASGI application
+Traceback (most recent call last):
+  File "D:\Document_parser\env\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 404, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "D:\Document_parser\env\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\fastapi\applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\middleware\errors.py", line 184, in __call__
+    raise exc
+  File "D:\Document_parser\env\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "D:\Document_parser\env\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "D:\Document_parser\env\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "D:\Document_parser\env\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+  File "D:\Document_parser\env\lib\site-packages\fastapi\routing.py", line 231, in app
+    raw_response = await run_endpoint_function(
+  File "D:\Document_parser\env\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "D:\Document_parser\app.py", line 20, in index
+    image_path = await request.files.get("image")
+AttributeError: 'Request' object has no attribute 'files'
+[2022-09-01 00:46:46,742: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:46:57,504: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:46:59,902: INFO: server]: Started server process [134048]
+[2022-09-01 00:46:59,902: INFO: on]: Waiting for application startup.
+[2022-09-01 00:46:59,903: INFO: on]: Application startup complete.
+[2022-09-01 00:47:01,159: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:47:03,289: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:47:05,920: INFO: server]: Started server process [141200]
+[2022-09-01 00:47:05,921: INFO: on]: Waiting for application startup.
+[2022-09-01 00:47:05,921: INFO: on]: Application startup complete.
+[2022-09-01 00:47:08,721: ERROR: h11_impl]: Exception in ASGI application
+Traceback (most recent call last):
+  File "D:\Document_parser\env\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 404, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "D:\Document_parser\env\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\fastapi\applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\middleware\errors.py", line 184, in __call__
+    raise exc
+  File "D:\Document_parser\env\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "D:\Document_parser\env\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "D:\Document_parser\env\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "D:\Document_parser\env\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+  File "D:\Document_parser\env\lib\site-packages\fastapi\routing.py", line 231, in app
+    raw_response = await run_endpoint_function(
+  File "D:\Document_parser\env\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "D:\Document_parser\app.py", line 20, in index
+    image_path = request.files["image"]
+AttributeError: 'Request' object has no attribute 'files'
+[2022-09-01 00:48:20,458: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:48:22,629: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:48:25,028: INFO: server]: Started server process [145060]
+[2022-09-01 00:48:25,028: INFO: on]: Waiting for application startup.
+[2022-09-01 00:48:25,029: INFO: on]: Application startup complete.
+[2022-09-01 00:48:35,156: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:48:37,448: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:48:41,168: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:48:46,261: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:48:49,996: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:48:55,347: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:49:00,511: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:49:02,920: INFO: server]: Started server process [144860]
+[2022-09-01 00:49:02,920: INFO: on]: Waiting for application startup.
+[2022-09-01 00:49:02,921: INFO: on]: ASGI 'lifespan' protocol appears unsupported.
+[2022-09-01 00:49:02,921: INFO: on]: Application startup complete.
+[2022-09-01 00:49:14,526: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:49:16,970: INFO: server]: Started server process [144544]
+[2022-09-01 00:49:16,970: INFO: on]: Waiting for application startup.
+[2022-09-01 00:49:16,971: INFO: on]: ASGI 'lifespan' protocol appears unsupported.
+[2022-09-01 00:49:16,971: INFO: on]: Application startup complete.
+[2022-09-01 00:49:20,963: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:49:23,346: INFO: server]: Started server process [144196]
+[2022-09-01 00:49:23,347: INFO: on]: Waiting for application startup.
+[2022-09-01 00:49:23,348: INFO: on]: ASGI 'lifespan' protocol appears unsupported.
+[2022-09-01 00:49:23,348: INFO: on]: Application startup complete.
+[2022-09-01 00:49:46,557: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:49:48,981: INFO: server]: Started server process [137616]
+[2022-09-01 00:49:48,982: INFO: on]: Waiting for application startup.
+[2022-09-01 00:49:48,983: INFO: on]: ASGI 'lifespan' protocol appears unsupported.
+[2022-09-01 00:49:48,983: INFO: on]: Application startup complete.
+[2022-09-01 00:49:53,162: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:49:55,400: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:49:57,550: WARNING: basereload]: StatReload detected changes in 'app.py'. Reloading...
+[2022-09-01 00:49:59,934: INFO: server]: Started server process [140872]
+[2022-09-01 00:49:59,935: INFO: on]: Waiting for application startup.
+[2022-09-01 00:49:59,935: INFO: on]: ASGI 'lifespan' protocol appears unsupported.
+[2022-09-01 00:49:59,935: INFO: on]: Application startup complete.
+[2022-09-01 00:50:08,387: INFO: server]: Shutting down
+[2022-09-01 00:50:08,494: INFO: server]: Finished server process [140872]
+[2022-09-01 00:50:09,517: INFO: basereload]: Stopping reloader process [136480]
+[2022-09-01 00:50:13,109: INFO: _internal]: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2022-09-01 00:50:13,109: INFO: _internal]: [33mPress CTRL+C to quit[0m
+[2022-09-01 00:50:13,111: INFO: _internal]:  * Restarting with stat
+[2022-09-01 00:50:15,308: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 00:50:15,315: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 00:50:48,298: INFO: _internal]: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2022-09-01 00:50:48,298: INFO: _internal]: [33mPress CTRL+C to quit[0m
+[2022-09-01 00:50:48,300: INFO: _internal]:  * Restarting with stat
+[2022-09-01 00:50:50,440: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 00:50:50,444: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 00:51:36,281: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 00:51:36] "[35m[1mPOST /via_postman HTTP/1.1[0m" 500 -
+[2022-09-01 00:51:40,305: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 00:51:40] "[35m[1mPOST /via_postman HTTP/1.1[0m" 500 -
+[2022-09-01 00:51:56,945: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 00:51:56] "[35m[1mPOST /via_postman HTTP/1.1[0m" 500 -
+[2022-09-01 00:52:12,491: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\app.py', reloading
+[2022-09-01 00:52:12,696: INFO: _internal]:  * Restarting with stat
+[2022-09-01 00:52:14,891: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 00:52:14,896: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 00:52:25,008: INFO: _internal]: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2022-09-01 00:52:25,008: INFO: _internal]: [33mPress CTRL+C to quit[0m
+[2022-09-01 00:52:25,010: INFO: _internal]:  * Restarting with stat
+[2022-09-01 00:52:27,170: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 00:52:27,175: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 00:52:27,627: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 00:52:27] "[31m[1mPOST /via_postman HTTP/1.1[0m" 400 -
+[2022-09-01 00:52:33,972: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 00:52:33] "[31m[1mPOST /via_postman HTTP/1.1[0m" 400 -
+[2022-09-01 00:52:34,900: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 00:52:34] "[31m[1mPOST /via_postman HTTP/1.1[0m" 400 -
+[2022-09-01 00:53:36,479: INFO: _internal]: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2022-09-01 00:53:36,479: INFO: _internal]: [33mPress CTRL+C to quit[0m
+[2022-09-01 00:53:36,481: INFO: _internal]:  * Restarting with stat
+[2022-09-01 00:53:38,589: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 00:53:38,602: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 00:53:51,129: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 00:53:51] "[31m[1mPOST /via_postman HTTP/1.1[0m" 400 -
+[2022-09-01 00:53:57,744: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 00:53:57] "[31m[1mGET /via_postman HTTP/1.1[0m" 405 -
+[2022-09-01 00:53:58,002: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 00:53:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-09-01 00:54:03,961: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\app.py', reloading
+[2022-09-01 00:54:04,172: INFO: _internal]:  * Restarting with stat
+[2022-09-01 00:54:06,330: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 00:54:06,334: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 00:54:07,372: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\app.py', reloading
+[2022-09-01 00:54:07,638: INFO: _internal]:  * Restarting with stat
+[2022-09-01 00:54:09,866: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 00:54:09,870: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 00:54:22,244: INFO: _internal]: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2022-09-01 00:54:22,244: INFO: _internal]: [33mPress CTRL+C to quit[0m
+[2022-09-01 00:54:22,246: INFO: _internal]:  * Restarting with stat
+[2022-09-01 00:54:24,476: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 00:54:24,493: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 00:54:24,836: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 00:54:24] "[35m[1mGET /via_postman HTTP/1.1[0m" 500 -
+[2022-09-01 00:54:24,871: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 00:54:24] "GET /via_postman?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+[2022-09-01 00:54:24,881: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 00:54:24] "GET /via_postman?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+[2022-09-01 00:54:24,897: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 00:54:24] "GET /?__debugger__=yes&cmd=resource&f=more.png HTTP/1.1" 200 -
+[2022-09-01 00:54:24,898: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 00:54:24] "GET /?__debugger__=yes&cmd=resource&f=less.png HTTP/1.1" 200 -
+[2022-09-01 00:54:24,941: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 00:54:24] "GET /via_postman?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2022-09-01 00:54:25,088: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 00:54:25] "[36mGET /via_postman?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-09-01 00:54:41,090: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 00:54:41] "[31m[1mPOST /via_postman HTTP/1.1[0m" 400 -
+[2022-09-01 00:54:42,015: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 00:54:42] "[31m[1mPOST /via_postman HTTP/1.1[0m" 400 -
+[2022-09-01 00:54:42,571: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 00:54:42] "[31m[1mPOST /via_postman HTTP/1.1[0m" 400 -
+[2022-09-01 00:54:43,000: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 00:54:43] "[31m[1mPOST /via_postman HTTP/1.1[0m" 400 -
+[2022-09-01 00:54:43,437: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 00:54:43] "[31m[1mPOST /via_postman HTTP/1.1[0m" 400 -
+[2022-09-01 00:54:43,796: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 00:54:43] "[31m[1mPOST /via_postman HTTP/1.1[0m" 400 -
+[2022-09-01 00:54:44,173: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 00:54:44] "[31m[1mPOST /via_postman HTTP/1.1[0m" 400 -
+[2022-09-01 00:54:44,504: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 00:54:44] "[31m[1mPOST /via_postman HTTP/1.1[0m" 400 -
+[2022-09-01 00:55:45,562: INFO: _internal]: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2022-09-01 00:55:45,562: INFO: _internal]: [33mPress CTRL+C to quit[0m
+[2022-09-01 00:55:45,564: INFO: _internal]:  * Restarting with stat
+[2022-09-01 00:55:47,728: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 00:55:47,732: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 00:55:51,997: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 00:55:51] "GET / HTTP/1.1" 200 -
+[2022-09-01 00:56:04,446: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 00:56:04] "[35m[1mGET /via_postman HTTP/1.1[0m" 500 -
+[2022-09-01 00:56:04,481: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 00:56:04] "[36mGET /via_postman?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[2022-09-01 00:56:04,497: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 00:56:04] "[36mGET /via_postman?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[2022-09-01 00:56:04,544: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 00:56:04] "[36mGET /via_postman?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-09-01 00:56:11,064: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\app.py', reloading
+[2022-09-01 00:56:11,271: INFO: _internal]:  * Restarting with stat
+[2022-09-01 00:56:13,724: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 00:56:13,728: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 00:56:45,146: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\app.py', reloading
+[2022-09-01 00:56:45,359: INFO: _internal]:  * Restarting with stat
+[2022-09-01 00:56:47,806: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 00:56:47,811: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 00:56:56,456: INFO: _internal]: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2022-09-01 00:56:56,456: INFO: _internal]: [33mPress CTRL+C to quit[0m
+[2022-09-01 00:56:56,458: INFO: _internal]:  * Restarting with stat
+[2022-09-01 00:56:58,520: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 00:56:58,524: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 00:57:22,915: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 00:57:22] "[31m[1mPOST /via_postman HTTP/1.1[0m" 400 -
+[2022-09-01 00:57:40,071: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 00:57:40] "[35m[1mPOST /via_postman HTTP/1.1[0m" 500 -
+[2022-09-01 00:57:57,369: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 00:57:57] "[31m[1mPOST /via_postman HTTP/1.1[0m" 400 -
+[2022-09-01 00:59:05,777: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 00:59:05] "[35m[1mPOST /via_postman HTTP/1.1[0m" 500 -
+[2022-09-01 00:59:50,303: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\component\\stage_00_template.py', reloading
+[2022-09-01 00:59:50,587: INFO: _internal]:  * Restarting with stat
+[2022-09-01 00:59:52,816: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 00:59:52,821: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:00:19,780: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 01:00:19] "[35m[1mPOST /via_postman HTTP/1.1[0m" 500 -
+[2022-09-01 01:00:34,906: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\component\\stage_00_template.py', reloading
+[2022-09-01 01:00:35,168: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:00:37,345: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:00:37,349: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:00:39,388: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\component\\stage_00_template.py', reloading
+[2022-09-01 01:00:39,611: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:00:41,745: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:00:41,749: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:00:51,906: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\component\\stage_00_template.py', reloading
+[2022-09-01 01:00:52,122: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:00:54,533: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:00:54,537: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:01:11,775: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 01:01:11] "[35m[1mPOST /via_postman HTTP/1.1[0m" 500 -
+[2022-09-01 01:01:37,147: INFO: _internal]: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2022-09-01 01:01:37,148: INFO: _internal]: [33mPress CTRL+C to quit[0m
+[2022-09-01 01:01:37,150: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:01:39,241: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:01:39,245: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:01:54,003: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 01:01:54] "[35m[1mPOST /via_postman HTTP/1.1[0m" 500 -
+[2022-09-01 01:02:16,187: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\component\\stage_00_template.py', reloading
+[2022-09-01 01:02:16,472: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:04:53,606: INFO: _internal]: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2022-09-01 01:04:53,606: INFO: _internal]: [33mPress CTRL+C to quit[0m
+[2022-09-01 01:04:53,609: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:04:55,786: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:04:55,790: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:05:11,664: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 01:05:11] "[35m[1mPOST /via_postman HTTP/1.1[0m" 500 -
+[2022-09-01 01:06:33,646: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\component\\stage_00_template.py', reloading
+[2022-09-01 01:06:34,004: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:06:36,234: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:06:36,237: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:06:48,890: INFO: _internal]: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2022-09-01 01:06:48,891: INFO: _internal]: [33mPress CTRL+C to quit[0m
+[2022-09-01 01:06:48,894: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:06:51,137: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:06:51,141: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:07:09,448: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 01:07:09] "[35m[1mPOST /via_postman HTTP/1.1[0m" 500 -
+[2022-09-01 01:07:19,016: INFO: _internal]: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2022-09-01 01:07:19,017: INFO: _internal]: [33mPress CTRL+C to quit[0m
+[2022-09-01 01:07:19,019: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:07:21,277: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:07:21,281: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:07:48,375: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 01:07:48] "[35m[1mPOST /via_postman HTTP/1.1[0m" 500 -
+[2022-09-01 01:10:04,029: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\component\\stage_00_template.py', reloading
+[2022-09-01 01:10:04,281: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:10:06,499: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:10:06,504: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:10:14,609: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\component\\stage_00_template.py', reloading
+[2022-09-01 01:10:14,847: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:10:17,105: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:10:17,110: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:10:25,560: INFO: _internal]: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2022-09-01 01:10:25,560: INFO: _internal]: [33mPress CTRL+C to quit[0m
+[2022-09-01 01:10:25,564: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:10:27,701: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:10:27,705: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:10:43,682: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 01:10:43] "POST /via_postman HTTP/1.1" 200 -
+[2022-09-01 01:14:12,405: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\app.py', reloading
+[2022-09-01 01:14:12,731: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:14:14,960: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:14:14,964: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:14:18,030: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\app.py', reloading
+[2022-09-01 01:14:18,302: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:14:20,744: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:14:20,749: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:14:26,858: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\app.py', reloading
+[2022-09-01 01:14:27,099: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:17:26,475: INFO: _internal]: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2022-09-01 01:17:26,476: INFO: _internal]: [33mPress CTRL+C to quit[0m
+[2022-09-01 01:17:26,479: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:17:28,932: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:17:28,937: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:17:41,986: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 01:17:41] "[35m[1mPOST /via_postman HTTP/1.1[0m" 500 -
+[2022-09-01 01:18:06,205: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\component\\stage_00_template.py', reloading
+[2022-09-01 01:18:06,589: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:18:09,103: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:18:09,108: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:19:50,454: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\app.py', reloading
+[2022-09-01 01:19:50,680: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:19:52,978: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:19:52,983: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:32:00,034: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\component\\stage_00_template.py', reloading
+[2022-09-01 01:32:00,250: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:32:33,371: INFO: _internal]: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2022-09-01 01:32:33,371: INFO: _internal]: [33mPress CTRL+C to quit[0m
+[2022-09-01 01:32:33,374: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:32:35,513: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:32:35,517: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:32:51,963: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 01:32:51] "POST /via_postman HTTP/1.1" 200 -
+[2022-09-01 01:33:15,039: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\component\\stage_00_template.py', reloading
+[2022-09-01 01:33:15,348: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:33:17,586: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:33:17,590: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:33:18,624: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\component\\stage_00_template.py', reloading
+[2022-09-01 01:33:18,825: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:33:20,901: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:33:20,905: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:33:27,003: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\component\\stage_00_template.py', reloading
+[2022-09-01 01:33:27,203: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:33:29,334: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:33:29,338: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:35:48,145: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\config\\__init__.py', reloading
+[2022-09-01 01:35:48,382: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:35:50,792: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:35:50,796: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:35:57,918: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\config\\__init__.py', reloading
+[2022-09-01 01:35:58,118: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:36:00,358: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:36:00,362: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:36:01,395: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\config\\__init__.py', reloading
+[2022-09-01 01:36:01,653: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:36:03,818: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:36:03,822: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:36:16,003: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\config\\__init__.py', reloading
+[2022-09-01 01:36:16,233: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:36:18,453: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:36:18,457: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:36:19,479: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\config\\__init__.py', reloading
+[2022-09-01 01:36:19,801: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:36:22,117: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:36:22,124: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:36:23,154: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\config\\__init__.py', reloading
+[2022-09-01 01:36:23,437: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:36:25,840: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:36:25,844: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:36:33,986: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\config\\__init__.py', reloading
+[2022-09-01 01:36:34,225: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:36:36,505: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:36:36,509: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:36:43,623: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\config\\__init__.py', reloading
+[2022-09-01 01:36:43,846: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:36:46,066: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:36:46,070: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:36:48,113: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\config\\__init__.py', reloading
+[2022-09-01 01:36:48,356: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:36:50,605: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:36:50,609: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:36:53,663: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\config\\__init__.py', reloading
+[2022-09-01 01:36:53,880: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:36:56,061: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:36:56,065: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:37:02,171: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\config\\__init__.py', reloading
+[2022-09-01 01:37:02,418: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:37:04,858: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:37:04,862: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:37:05,890: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\config\\__init__.py', reloading
+[2022-09-01 01:37:06,127: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:37:08,328: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:37:08,332: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:37:09,366: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\config\\__init__.py', reloading
+[2022-09-01 01:37:09,586: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:37:11,812: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:37:11,816: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:37:14,885: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\config\\__init__.py', reloading
+[2022-09-01 01:37:15,130: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:37:17,517: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:37:17,521: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:37:19,549: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\config\\__init__.py', reloading
+[2022-09-01 01:37:19,775: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:37:21,981: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:37:21,985: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:37:23,015: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\config\\__init__.py', reloading
+[2022-09-01 01:37:23,276: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:37:25,488: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:37:25,493: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:37:27,546: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\config\\__init__.py', reloading
+[2022-09-01 01:37:27,783: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:37:29,960: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:37:29,964: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:37:34,051: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\config\\__init__.py', reloading
+[2022-09-01 01:37:34,279: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:37:36,525: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:37:36,529: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:37:37,558: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\config\\__init__.py', reloading
+[2022-09-01 01:37:37,768: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:37:40,002: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:37:40,006: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:37:42,046: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\config\\__init__.py', reloading
+[2022-09-01 01:37:42,266: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:37:44,759: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:37:44,764: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:37:45,796: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\config\\__init__.py', reloading
+[2022-09-01 01:37:46,208: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:37:48,406: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:37:48,410: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:38:22,976: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\component\\stage_00_template.py', reloading
+[2022-09-01 01:38:23,340: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:45:43,996: INFO: _internal]: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2022-09-01 01:45:43,996: INFO: _internal]: [33mPress CTRL+C to quit[0m
+[2022-09-01 01:45:43,998: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:45:46,263: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:45:46,272: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:46:03,578: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 01:46:03] "[35m[1mPOST /via_postman HTTP/1.1[0m" 500 -
+[2022-09-01 01:46:18,796: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\config\\__init__.py', reloading
+[2022-09-01 01:46:19,037: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:46:21,412: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:46:21,418: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:46:29,529: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\config\\__init__.py', reloading
+[2022-09-01 01:46:29,758: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:46:32,015: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:46:32,019: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:46:35,769: INFO: _internal]: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2022-09-01 01:46:35,769: INFO: _internal]: [33mPress CTRL+C to quit[0m
+[2022-09-01 01:46:35,771: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:46:37,954: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:46:37,958: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:46:40,004: INFO: common]: yaml file: configs\config.yaml loaded successfully
+[2022-09-01 01:46:52,184: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 01:46:52] "[35m[1mPOST /via_postman HTTP/1.1[0m" 500 -
+[2022-09-01 01:48:18,111: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\utils\\common.py', reloading
+[2022-09-01 01:48:18,356: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:48:20,556: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:48:20,561: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:48:21,594: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\utils\\common.py', reloading
+[2022-09-01 01:48:21,824: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:48:24,006: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:48:24,010: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:48:27,081: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\utils\\common.py', reloading
+[2022-09-01 01:48:27,287: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:48:29,463: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:48:29,468: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:48:31,507: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\utils\\common.py', reloading
+[2022-09-01 01:48:31,727: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:48:33,884: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:48:33,888: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:48:41,170: INFO: _internal]: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2022-09-01 01:48:41,170: INFO: _internal]: [33mPress CTRL+C to quit[0m
+[2022-09-01 01:48:41,172: INFO: _internal]:  * Restarting with stat
+[2022-09-01 01:48:43,309: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 01:48:43,313: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 01:48:48,709: INFO: common]: yaml file: configs\config.yaml loaded successfully
+[2022-09-01 01:49:00,861: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 01:49:00] "POST /via_postman HTTP/1.1" 200 -
