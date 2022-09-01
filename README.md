@@ -24,5 +24,9 @@ source activate ./env
 ```bash
 pip install -r requirements.txt
 ```
+<img width="1205" alt="image" src="https://user-images.githubusercontent.com/57321948/187857513-9df3c68d-c6f5-4734-91b9-85bd9d370f5b.png">
+
+
 
 ### STEP 06- commit and push the changes to the remote repository
+
