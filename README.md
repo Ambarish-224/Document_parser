@@ -1,5 +1,5 @@
 # 📙 Document scanner
-Document Scanner has a huge application in domains like aviation, Banking etc. It helps to extract important information from the documents, which reduces manual work to a huge extent. Here we have built an API which will have an input of a image and the language which it should extract. It will give response of text that is exracted and Image with the area of response. We have used PaddleOCR, which is a Pyth for text extraction, which is a Python library.
+Document Scanner has a huge application in domains like aviation, Banking etc. It helps to extract important information from the documents, which reduces manual work to a huge extent. Here we have built an API which will have an input of a image and the language which it should extract. It will give response of text that is exracted and Image with the area of response. We have used PaddleOCR, which is a Package for text extraction, which is a Python library.
 
 ## 💿 Installing
 
