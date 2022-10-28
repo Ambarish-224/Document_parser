@@ -27,18 +27,18 @@ windows
 python app.py 
 ```
 
-## 🚀 API testing using Postman
+## 🚀 API testing using FastAPI Swagger UI
 
-URI to be used -: ```http://127.0.0.1:5000/via_postman```
+URI to be used -: ```http://localhost:5000/docs```
 
-<img width="869" alt="image" src="https://user-images.githubusercontent.com/57321948/187866575-1d158199-3d78-4fc9-9f4e-dd9e0be95859.png">
+<img width="748" alt="image" src="https://user-images.githubusercontent.com/57321948/198568854-d3eb0073-3652-46e1-aac2-c2dbea97ba43.png">
 
 
 
-<img width="1207" alt="image" src="https://user-images.githubusercontent.com/57321948/187869364-229b60d4-5398-47d8-af20-e6c9b0a54d93.png">
+<img width="791" alt="image" src="https://user-images.githubusercontent.com/57321948/198568983-24ecc11f-3937-430d-90b6-ada4c3c370e7.png">
 
 ## 🔧 Built With
-- Flask
+- FastAPI
 - Python 3.8
 - Postman
 
