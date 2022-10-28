@@ -8,7 +8,7 @@ from doc_parser.exception import DocumentException
 class Configuration:
     def __init__(self):
         try:
-            config = read_yaml(os.path.join(os.getcwd(), "config", "config.yaml"))
+            config = read_yaml(os.path.join(os.getcwd(), "configs", "config.yaml"))
 
             artifacts = config['artifacts']
             # KEY_TOKEN = config['KEY_TOKEN']
