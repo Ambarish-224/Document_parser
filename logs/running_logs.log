@@ -924,3 +924,11 @@ AttributeError: 'Request' object has no attribute 'files'
 [2022-09-01 01:48:43,313: INFO: _internal]:  * Debugger PIN: 289-583-597
 [2022-09-01 01:48:48,709: INFO: common]: yaml file: configs\config.yaml loaded successfully
 [2022-09-01 01:49:00,861: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 01:49:00] "POST /via_postman HTTP/1.1" 200 -
+[2022-09-01 12:55:02,643: INFO: _internal]: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2022-09-01 12:55:02,643: INFO: _internal]: [33mPress CTRL+C to quit[0m
+[2022-09-01 12:55:02,645: INFO: _internal]:  * Restarting with stat
+[2022-09-01 12:55:04,640: WARNING: _internal]:  * Debugger is active!
+[2022-09-01 12:55:04,644: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-09-01 12:56:18,025: INFO: common]: yaml file: configs\config.yaml loaded successfully
+[2022-09-01 12:56:28,602: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 12:56:28] "POST /via_postman HTTP/1.1" 200 -

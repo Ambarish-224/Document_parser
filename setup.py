@@ -14,7 +14,7 @@ setup(
     name=SRC_REPO,
     version="0.0.1",
     author=AUTHOR_USER_NAME,
-    description="Template for python project",
+    description="Document parser for extracting text from images",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url=f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}",
