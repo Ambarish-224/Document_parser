@@ -6,3 +6,4 @@ artifacts:
   prediction_path: prediction
   font_file: simfang.ttf
   prediction_file: prediction.png
+  input_file: input.png

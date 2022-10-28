@@ -1,22 +1,23 @@
 from distutils.log import debug
+import uvicorn
 from doc_parser.component.parser import DocParser
+from doc_parser.exception import DocumentException
+from fastapi.responses import JSONResponse
 
 from typing import Optional
-from flask import Flask, request
-app = Flask(__name__)
+from fastapi import APIRouter, File, Request, FastAPI
+from fastapi.responses import JSONResponse
+app = FastAPI()
 
-
-# Take input as image path and give json response
-@app.route('/via_postman', methods=["GET", 'POST'])
-def image_response():
-    if request.method == "POST":
-        # get input as image path
-        image_path = request.json["image_path"]
-        language = request.json["language"]
-        doc_parser = DocParser(str(image_path), language)
+@app.post("/via_postman")
+async def image_response(image_file: bytes = File(...), language: str = "en"):
+    try:
+        doc_parser = DocParser(image_file, language)
         encoded_image, result = doc_parser.getOcrPrediction()
-        response =  {"result": result, "image": encoded_image}
+        response =  JSONResponse(content={"result": result, "image": encoded_image}, status_code=200)
         return response
+    except DocumentException as e:
+        raise e
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', port = 5000, debug=True)
+    uvicorn.run(app, host='0.0.0.0', port = 5000)

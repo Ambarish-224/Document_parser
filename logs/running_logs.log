@@ -932,3 +932,230 @@ AttributeError: 'Request' object has no attribute 'files'
 [2022-09-01 12:55:04,644: INFO: _internal]:  * Debugger PIN: 289-583-597
 [2022-09-01 12:56:18,025: INFO: common]: yaml file: configs\config.yaml loaded successfully
 [2022-09-01 12:56:28,602: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 12:56:28] "POST /via_postman HTTP/1.1" 200 -
+[2022-10-28 13:21:22,985: INFO: _internal]: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.50:5000
+[2022-10-28 13:21:22,985: INFO: _internal]: [33mPress CTRL+C to quit[0m
+[2022-10-28 13:21:22,987: INFO: _internal]:  * Restarting with stat
+[2022-10-28 13:21:25,485: WARNING: _internal]:  * Debugger is active!
+[2022-10-28 13:21:25,491: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-10-28 13:21:38,134: INFO: _internal]: 127.0.0.1 - - [28/Oct/2022 13:21:38] "[35m[1mPOST /via_postman HTTP/1.1[0m" 500 -
+[2022-10-28 13:22:07,554: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\config\\__init__.py', reloading
+[2022-10-28 13:22:07,794: INFO: _internal]:  * Restarting with stat
+[2022-10-28 13:22:09,918: WARNING: _internal]:  * Debugger is active!
+[2022-10-28 13:22:09,922: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-10-28 13:22:12,978: INFO: _internal]:  * Detected change in 'D:\\Document_parser\\doc_parser\\config\\__init__.py', reloading
+[2022-10-28 13:22:13,195: INFO: _internal]:  * Restarting with stat
+[2022-10-28 13:22:15,513: WARNING: _internal]:  * Debugger is active!
+[2022-10-28 13:22:15,517: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-10-28 13:22:20,369: INFO: _internal]: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.50:5000
+[2022-10-28 13:22:20,369: INFO: _internal]: [33mPress CTRL+C to quit[0m
+[2022-10-28 13:22:20,371: INFO: _internal]:  * Restarting with stat
+[2022-10-28 13:22:22,725: WARNING: _internal]:  * Debugger is active!
+[2022-10-28 13:22:22,729: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-10-28 13:22:23,639: INFO: common]: yaml file: D:\Document_parser\configs\config.yaml loaded successfully
+[2022-10-28 13:22:35,385: INFO: _internal]: 127.0.0.1 - - [28/Oct/2022 13:22:35] "POST /via_postman HTTP/1.1" 200 -
+[2022-10-28 13:35:22,495: INFO: _internal]: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.50:5000
+[2022-10-28 13:35:22,495: INFO: _internal]: [33mPress CTRL+C to quit[0m
+[2022-10-28 13:35:22,497: INFO: _internal]:  * Restarting with stat
+[2022-10-28 13:35:25,207: WARNING: _internal]:  * Debugger is active!
+[2022-10-28 13:35:25,213: INFO: _internal]:  * Debugger PIN: 289-583-597
+[2022-10-28 13:36:17,760: INFO: _internal]: 127.0.0.1 - - [28/Oct/2022 13:36:17] "[31m[1mPOST /via_postman HTTP/1.1[0m" 400 -
+[2022-10-28 13:39:43,641: INFO: _internal]: 127.0.0.1 - - [28/Oct/2022 13:39:43] "[31m[1mPOST /via_postman HTTP/1.1[0m" 400 -
+[2022-10-28 13:40:18,008: INFO: _internal]: 127.0.0.1 - - [28/Oct/2022 13:40:18] "[31m[1mPOST /via_postman HTTP/1.1[0m" 400 -
+[2022-10-28 14:10:05,591: INFO: server]: Started server process [38980]
+[2022-10-28 14:10:05,591: INFO: on]: Waiting for application startup.
+[2022-10-28 14:10:05,592: INFO: on]: Application startup complete.
+[2022-10-28 14:10:05,592: INFO: server]: Uvicorn running on http://0.0.0.0:5000 (Press CTRL+C to quit)
+[2022-10-28 14:11:13,232: INFO: common]: yaml file: D:\Document_parser\configs\config.yaml loaded successfully
+[2022-10-28 14:11:13,233: ERROR: h11_impl]: Exception in ASGI application
+Traceback (most recent call last):
+  File "D:\Document_parser\doc_parser\component\parser.py", line 42, in getOcrPrediction
+    result = self.ocr.ocr(self.image_path, cls=True)
+  File "D:\Document_parser\env\lib\site-packages\paddleocr\paddleocr.py", line 485, in ocr
+    assert isinstance(img, (np.ndarray, list, str))
+AssertionError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "app.py", line 16, in image_response
+    encoded_image, result = doc_parser.getOcrPrediction()
+  File "D:\Document_parser\doc_parser\component\parser.py", line 56, in getOcrPrediction
+    raise DocumentException(e, sys) from e
+doc_parser.exception.DocumentException: 
+        Error occured in script: 
+        [ D:\Document_parser\doc_parser\component\parser.py ] at 
+        try block line number: [42] and exception block line number: [56] 
+        error message: []
+        
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Document_parser\env\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 404, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "D:\Document_parser\env\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\fastapi\applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\middleware\errors.py", line 184, in __call__
+    raise exc
+  File "D:\Document_parser\env\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "D:\Document_parser\env\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "D:\Document_parser\env\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "D:\Document_parser\env\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+  File "D:\Document_parser\env\lib\site-packages\fastapi\routing.py", line 231, in app
+    raw_response = await run_endpoint_function(
+  File "D:\Document_parser\env\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "app.py", line 20, in image_response
+    return JSONResponse(content={"error": e}, status_code=500)
+  File "D:\Document_parser\env\lib\site-packages\starlette\responses.py", line 187, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+  File "D:\Document_parser\env\lib\site-packages\starlette\responses.py", line 49, in __init__
+    self.body = self.render(content)
+  File "D:\Document_parser\env\lib\site-packages\starlette\responses.py", line 190, in render
+    return json.dumps(
+  File "D:\Document_parser\env\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "D:\Document_parser\env\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "D:\Document_parser\env\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "D:\Document_parser\env\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type DocumentException is not JSON serializable
+[2022-10-28 14:11:50,174: INFO: server]: Shutting down
+[2022-10-28 14:11:50,281: INFO: on]: Waiting for application shutdown.
+[2022-10-28 14:11:50,281: INFO: on]: Application shutdown complete.
+[2022-10-28 14:11:50,281: INFO: server]: Finished server process [38980]
+[2022-10-28 14:11:53,624: INFO: server]: Started server process [12540]
+[2022-10-28 14:11:53,624: INFO: on]: Waiting for application startup.
+[2022-10-28 14:11:53,625: INFO: on]: Application startup complete.
+[2022-10-28 14:11:53,625: INFO: server]: Uvicorn running on http://0.0.0.0:5000 (Press CTRL+C to quit)
+[2022-10-28 14:12:01,800: INFO: common]: yaml file: D:\Document_parser\configs\config.yaml loaded successfully
+[2022-10-28 14:12:23,585: INFO: server]: Shutting down
+[2022-10-28 14:12:23,697: INFO: on]: Waiting for application shutdown.
+[2022-10-28 14:12:23,697: INFO: on]: Application shutdown complete.
+[2022-10-28 14:12:23,698: INFO: server]: Finished server process [12540]
+[2022-10-28 14:12:32,357: INFO: server]: Started server process [41844]
+[2022-10-28 14:12:32,358: INFO: on]: Waiting for application startup.
+[2022-10-28 14:12:32,358: INFO: on]: Application startup complete.
+[2022-10-28 14:12:32,359: INFO: server]: Uvicorn running on http://0.0.0.0:5000 (Press CTRL+C to quit)
+[2022-10-28 14:12:43,900: INFO: common]: yaml file: D:\Document_parser\configs\config.yaml loaded successfully
+[2022-10-28 14:12:43,901: ERROR: h11_impl]: Exception in ASGI application
+Traceback (most recent call last):
+  File "D:\Document_parser\doc_parser\component\parser.py", line 42, in getOcrPrediction
+    result = self.ocr.ocr(self.image_path, cls=True)
+  File "D:\Document_parser\env\lib\site-packages\paddleocr\paddleocr.py", line 485, in ocr
+    assert isinstance(img, (np.ndarray, list, str))
+AssertionError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Document_parser\env\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 404, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "D:\Document_parser\env\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\fastapi\applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\middleware\errors.py", line 184, in __call__
+    raise exc
+  File "D:\Document_parser\env\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "D:\Document_parser\env\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "D:\Document_parser\env\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "D:\Document_parser\env\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "D:\Document_parser\env\lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+  File "D:\Document_parser\env\lib\site-packages\fastapi\routing.py", line 231, in app
+    raw_response = await run_endpoint_function(
+  File "D:\Document_parser\env\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "app.py", line 20, in image_response
+    raise e
+  File "app.py", line 16, in image_response
+    encoded_image, result = doc_parser.getOcrPrediction()
+  File "D:\Document_parser\doc_parser\component\parser.py", line 56, in getOcrPrediction
+    raise DocumentException(e, sys) from e
+doc_parser.exception.DocumentException: 
+        Error occured in script: 
+        [ D:\Document_parser\doc_parser\component\parser.py ] at 
+        try block line number: [42] and exception block line number: [56] 
+        error message: []
+        
+[2022-10-28 15:44:49,344: INFO: server]: Shutting down
+[2022-10-28 15:44:49,453: INFO: on]: Waiting for application shutdown.
+[2022-10-28 15:44:49,454: INFO: on]: Application shutdown complete.
+[2022-10-28 15:44:49,454: INFO: server]: Finished server process [41844]
+[2022-10-28 15:44:53,500: INFO: server]: Started server process [73540]
+[2022-10-28 15:44:53,501: INFO: on]: Waiting for application startup.
+[2022-10-28 15:44:53,501: INFO: on]: Application startup complete.
+[2022-10-28 15:44:53,501: INFO: server]: Uvicorn running on http://0.0.0.0:5000 (Press CTRL+C to quit)
+[2022-10-28 15:45:14,981: INFO: server]: Shutting down
+[2022-10-28 15:45:15,088: INFO: on]: Waiting for application shutdown.
+[2022-10-28 15:45:15,089: INFO: on]: Application shutdown complete.
+[2022-10-28 15:45:15,089: INFO: server]: Finished server process [73540]
+[2022-10-28 15:46:27,934: INFO: server]: Started server process [69436]
+[2022-10-28 15:46:27,935: INFO: on]: Waiting for application startup.
+[2022-10-28 15:46:27,936: INFO: on]: Application startup complete.
+[2022-10-28 15:46:27,937: INFO: server]: Uvicorn running on http://0.0.0.0:5000 (Press CTRL+C to quit)
+[2022-10-28 15:48:02,268: INFO: common]: yaml file: D:\Document_parser\configs\config.yaml loaded successfully
+[2022-10-28 15:49:55,065: INFO: server]: Started server process [12704]
+[2022-10-28 15:49:55,066: INFO: on]: Waiting for application startup.
+[2022-10-28 15:49:55,067: INFO: on]: Application startup complete.
+[2022-10-28 15:49:55,069: INFO: server]: Uvicorn running on http://0.0.0.0:5000 (Press CTRL+C to quit)
+[2022-10-28 15:50:05,577: INFO: common]: yaml file: D:\Document_parser\configs\config.yaml loaded successfully
+[2022-10-28 15:51:52,000: INFO: server]: Started server process [43352]
+[2022-10-28 15:51:52,000: INFO: on]: Waiting for application startup.
+[2022-10-28 15:51:52,002: INFO: on]: Application startup complete.
+[2022-10-28 15:51:52,003: INFO: server]: Uvicorn running on http://0.0.0.0:5000 (Press CTRL+C to quit)
+[2022-10-28 15:52:01,195: INFO: common]: yaml file: D:\Document_parser\configs\config.yaml loaded successfully
+[2022-10-28 16:04:17,436: INFO: server]: Started server process [66348]
+[2022-10-28 16:04:17,437: INFO: on]: Waiting for application startup.
+[2022-10-28 16:04:17,440: INFO: on]: Application startup complete.
+[2022-10-28 16:04:17,443: INFO: server]: Uvicorn running on http://0.0.0.0:5000 (Press CTRL+C to quit)
+[2022-10-28 16:04:42,333: INFO: common]: yaml file: D:\Document_parser\configs\config.yaml loaded successfully
+[2022-10-28 16:08:03,077: INFO: server]: Started server process [64948]
+[2022-10-28 16:08:03,078: INFO: on]: Waiting for application startup.
+[2022-10-28 16:08:03,078: INFO: on]: Application startup complete.
+[2022-10-28 16:08:03,079: INFO: server]: Uvicorn running on http://0.0.0.0:5000 (Press CTRL+C to quit)
+[2022-10-28 16:10:34,127: INFO: common]: yaml file: D:\Document_parser\configs\config.yaml loaded successfully
+[2022-10-28 16:13:57,475: INFO: server]: Shutting down
+[2022-10-28 16:13:57,584: INFO: on]: Waiting for application shutdown.
+[2022-10-28 16:13:57,584: INFO: on]: Application shutdown complete.
+[2022-10-28 16:13:57,585: INFO: server]: Finished server process [64948]

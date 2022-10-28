@@ -18,5 +18,6 @@ class Configuration:
             self.prediction_path = artifacts['prediction_path']
             self.font_file = artifacts['font_file']
             self.prediction_file = artifacts['prediction_file']
+            self.input_file = artifacts['input_file']
         except Exception as e:
             raise DocumentException(e, sys) from e
