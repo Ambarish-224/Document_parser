@@ -37,6 +37,9 @@ URI to be used -: ```http://localhost:5000/docs```
 
 <img width="791" alt="image" src="https://user-images.githubusercontent.com/57321948/198568983-24ecc11f-3937-430d-90b6-ada4c3c370e7.png">
 
+## Deployment
+For Deployment please refer [this](https://github.com/ketangangal/Document_parser/blob/main/docs/manual_deploy.MD).
+
 ## 🔧 Built With
 - FastAPI
 - Python 3.8
