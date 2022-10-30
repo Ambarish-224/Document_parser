@@ -23,4 +23,4 @@
 10.Wait for Your web application to be deployed.
 <img width="1235" alt="image" src="https://user-images.githubusercontent.com/57321948/198867252-b12d4826-3001-440b-8b13-3e5d70c0b8d3.png">
 
-
+You can also Deploy using GitHub Actions refer [this](https://aws.amazon.com/blogs/containers/deploy-applications-in-aws-app-runner-with-github-actions/).
